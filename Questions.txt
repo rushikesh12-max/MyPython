@@ -1,0 +1,142 @@
+1) define 3 functions "add()","modify()" and "delete()" with just a print message.
+now accept input from user as a number. if the number entered is 1, call "add()"
+if it is 2, call "modify()" if it is 3, call "delete()" [ hint: use "match... case" ]
+def add():
+    print("Call add function")
+    
+def modify():
+    print("Call modify function")
+    
+def delete():
+    print("Call delete function")
+    
+num=int(input("Enter a number: "))
+
+match(num):
+    case 1: add()
+    
+    case 2: modify()
+    
+    case 3: delete()
+ 
+
+2) define a function which accepts a number and return its square.
+def showsquare(num):
+    if num<=0:
+        print("Number is zero or nagative")
+    else:
+        s=num*num
+        print(s)
+
+num=int(input("Enter a number: "))
+showsquare(num)
+
+3) define a function which accepts character,int,string and display them.
+def disp(*vars): 
+     
+	if(vars.__len__()==0):  
+		print("no argument passed")
+	else:
+		for k in vars:
+			print(k)
+
+
+def show():
+    disp(12,"Rushi",'R')
+show()
+
+
+4) define "myfun1()" with a print statement. now define "myfun2()" which should invoke "myfun1()" function. 
+invoke myfun2()
+
+def myfun1():
+    print("This is Me")
+    
+def myfun2():
+    myfun1()
+    
+myfun2()
+
+5) define a function to accept a number. This function should return 1 if a number passed is more than 0
+return -1 if a number passed is less than 0 , else it should return 0.
+def fun(num):
+    if(num>0):
+        return 1
+    elif(num<0):
+        return -1
+    else:
+        return 0
+    
+num=int(input("Enter a number: "))
+result=fun(num)
+print(result)
+
+
+6) define a function which accepts a character and return toggle of it.
+def tocheck(char):
+    if (char.islower()):
+        return char.upper()
+    elif(char.isupper()):
+        return char.lower()
+    else:
+        return 0
+
+char=input("Enter a character: ")
+result=tocheck(char)
+print(result)
+
+Alternate:
+def tocheck():
+    char=input("Enter a character: ")
+    if(ord(char)>=65 and ord(char)<=90):
+        res=char.lower()
+        print(res)
+    elif(ord(char)>=97 and ord(char)<=122):
+        res=char.upper()
+        print(res)
+    else:
+        print("Invalid")
+        
+tocheck()
+ 
+
+7) define a function which accepts a string , toggle and return it.
+	[ hint :  use "swapcase()" function of string ]
+def swapcase():
+    print("Done with the toggle")
+    
+text=input("Enter a line: ")
+result=text.swapcase()
+print(result)
+
+
+8) write a function to accept minimum 3 characters and maximum 5 characters. 
+ 	[ use default arguments method ]
+def disp(char1, char2, char3, char4='B', char5='C'):
+    print(char1,"\t",char2,"\t",char3,"\t",char4,"\t",char5)
+    
+def fun():
+    disp('F','G','H')
+    disp('Z','Y','X','V','U')
+    
+fun()
+    
+
+
+9) define a function in such a way that it can accept n number of values and print their sum. [ variable number of arguments]
+
+def disp(*vars): 
+     
+	if(vars.__len__()==0):  
+		print("no argument passed")
+	else:
+         result=0
+         result=sum(vars)
+         print(result)
+         
+
+def fun():
+	disp(10,20,30,40,50)
+fun()
+
+
